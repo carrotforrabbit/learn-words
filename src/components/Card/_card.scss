@@ -1,0 +1,44 @@
+@import "./../App/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 2rem 1.5rem;
+  background-color: $add-color;
+  color: $bgr-color;
+  border-radius: 50px;
+  -webkit-box-shadow: 6px 7px 32px -6px rgba(242, 211, 184, 1);
+  -moz-box-shadow: 6px 7px 32px -6px rgba(242, 211, 184, 1);
+  box-shadow: 6px 7px 32px -6px rgba(242, 211, 184, 1);
+}
+
+.card__btn {
+  margin: 1rem auto;
+  padding: 1rem 3rem;
+  border: 1px solid $bgr-color;
+  border-radius: 50px;
+  background-color: $font-color;
+  color: $bgr-color;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
+
+.card__title,
+.card__subtitle {
+  margin: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card__text {
+  text-align: center;
+}

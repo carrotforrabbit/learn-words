@@ -1,0 +1,19 @@
+@import "./../App/variables";
+
+.header__list {
+  list-style-type: none;
+  padding: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.header__item {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  transition: 0.5s linear;
+
+  &:hover {
+    text-decoration: underline;
+    color: $accent-color;
+  }
+}
