@@ -56,11 +56,11 @@ const List = ({ key, word, transcription, translation, theme }) => {
               <input className="list__input" type="text" placeholder={theme} />
             </li>
             <li className="list__item btns">
-              {!pressed && (
+              {
                 <button className="list__btn btn-save" onClick={editWord}>
                   Edit
                 </button>
-              )}
+              }
               <DelBtn />
             </li>
           </ul>
