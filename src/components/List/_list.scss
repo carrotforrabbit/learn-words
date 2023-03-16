@@ -31,3 +31,16 @@
     background-color: $accent-color;
   }
 }
+
+.btn-save {
+  background-color: transparent;
+  border: 1px solid $font-color;
+  color: $font-color;
+}
+
+.list__input {
+  max-width: 50%;
+  padding: 0.5rem 1rem;
+  border: 1px solid $bgr-color;
+  border-radius: 50px;
+}

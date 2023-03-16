@@ -1,0 +1,17 @@
+@import "./../App/variables";
+
+.card__like-icon {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid $bgr-color;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+.card__likeSelected {
+  fill: $accent-color;
+}

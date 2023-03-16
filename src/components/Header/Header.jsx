@@ -8,6 +8,7 @@ function Header() {
         <li className="header__logo"></li>
         <li className="header__item">Lists</li>
         <li className="header__item">Cards</li>
+        <li className="header__item">Liked</li>
         <li className="header__item">About</li>
       </ul>
     </div>

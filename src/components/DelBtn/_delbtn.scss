@@ -1,0 +1,16 @@
+@import "./../App/variables";
+
+.list__btn {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border: 1px solid $bgr-color;
+  border-radius: 50px;
+  background-color: $font-color;
+  color: $bgr-color;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
