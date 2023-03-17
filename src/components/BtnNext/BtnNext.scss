@@ -1,0 +1,12 @@
+@import "./../App/variables";
+
+.card__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: $bgr-color;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

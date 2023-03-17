@@ -50,17 +50,6 @@
   -webkit-text-stroke: 1px $bgr-color;
 }
 
-.card__text {
+.card .card__text {
   text-align: center;
-}
-
-.card__icon {
-  width: 2rem;
-  height: 2rem;
-  fill: $bgr-color;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 }

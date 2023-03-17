@@ -13,12 +13,16 @@
   border-radius: 25px;
 }
 
+.list__item {
+  width: 20%;
+}
+
 .visually-hidden {
   display: none;
 }
 
 .list__btn {
-  margin: 1rem auto;
+  margin: 1rem;
   padding: 0.5rem 1rem;
   border: 1px solid $bgr-color;
   border-radius: 50px;
@@ -36,6 +40,18 @@
   background-color: transparent;
   border: 1px solid $font-color;
   color: $font-color;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border: 1px solid $font-color;
+  border-radius: 50px;
+  color: $font-color;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-color;
+    color: $bgr-color;
+  }
 }
 
 .list__input {

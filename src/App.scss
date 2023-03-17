@@ -1,7 +1,8 @@
 @import "./../src/components/App/variables";
 
 body {
-  background-image: url("./img/noisy-texture-300x300-o31-d23-c-0f6296-t0.png");
+  padding: 3rem;
+  background: url("./img/noisy-texture-300x300-o31-d23-c-0f6296-t0.png");
   font-size: 1rem;
   color: $font-color;
   text-transform: uppercase;

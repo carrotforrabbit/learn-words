@@ -10,7 +10,9 @@ class WordCard extends React.Component {
     return (
       <React.Fragment>
         <Header></Header>
-        <Card></Card>
+        {words.map((word) => (
+          <Card key={word.key} {...word}></Card>
+        ))}
         {words.map((word) => (
           <List key={word.key} {...word}></List>
         ))}
