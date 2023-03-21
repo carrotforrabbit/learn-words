@@ -8,9 +8,9 @@
 }
 
 .card {
+  width: 15em;
   display: flex;
   flex-direction: column;
-  width: 20%;
   margin: 0 auto;
   margin-bottom: 3rem;
   padding: 2rem 1.5rem;
@@ -36,6 +36,15 @@
 
   &:hover {
     background-color: $accent-color;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $accent-color;
+  }
+
+  &:active {
+    background-color: $add-color;
   }
 }
 

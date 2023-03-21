@@ -1,47 +1,49 @@
 import React, { useState } from "react";
 import "../Card/_card.scss";
 import Like from "./../Like/Like.jsx";
-import BtnPrev from "./../BtnPrev/BtnPrev.jsx";
-import BtnNext from "./../BtnNext/BtnNext.jsx";
+import words from "../../utils/words";
 
 const Card = ({ key, word, transcription, translation }) => {
   const [pressed, setPressed] = useState(false);
   const showWord = () => {
     setPressed(!pressed);
   };
+  const item = words[key];
+
   return (
     <div className="card-container">
       {!pressed ? (
         <>
-          <BtnPrev />
-          <div className="card">
+          <div {...item} className="card">
             <Like />
-            <p className="card__title visually-hidden ">{key}</p>
-            <p className="card__title">{word}</p>
-            <p className="card__text">[{transcription}]</p>
-            <p className="card__subtitle visually-hidden">{translation}</p>
+            <p className="card__title visually-hidden ">{item.key}</p>
+            <p className="card__title">{item.word}</p>
+            <p className="card__text">{item.transcription}</p>
+            <p className="card__subtitle visually-hidden">{item.translation}</p>
             <button className="card__btn" onClick={showWord}>
-              Show word
+              Show tranlation
             </button>
           </div>
-          <BtnNext />
         </>
       ) : (
         <>
-          <BtnPrev />
           <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{key}</p>
-            <p className="card__subtitle">{translation}</p>
+            <p className="card__title visually-hidden ">{item.key}</p>
+            <p className="card__subtitle">{item.translation}</p>
             <button className="card__btn" onClick={showWord}>
               Show word
             </button>
           </div>
-          <BtnNext />
         </>
       )}
     </div>
   );
 };
-
+Card.defaultProps = {
+  key: "0",
+  word: "word",
+  translation: "translation",
+  transcription: " ",
+};
 export default Card;

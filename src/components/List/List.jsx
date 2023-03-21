@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "../List/_list.scss";
 import "../DelBtn/DelBtn.jsx";
 import DelBtn from "../DelBtn/DelBtn.jsx";
+import words from "../../utils/words";
 
 const List = ({ key, word, transcription, translation, theme }) => {
+  words.map((word) => <List key={word.key} {...word}></List>);
   const [pressed, setPressed] = useState(false);
   const editWord = () => {
     setPressed(!pressed);
@@ -64,6 +66,14 @@ const List = ({ key, word, transcription, translation, theme }) => {
       )}
     </div>
   );
+};
+
+List.defaultProps = {
+  key: "0",
+  word: "word",
+  translation: "translation",
+  transcription: " ",
+  theme: "theme",
 };
 
 export default List;
