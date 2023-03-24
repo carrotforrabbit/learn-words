@@ -64,14 +64,10 @@ function Header() {
         <main>
           <Routes>
             <Route path="/lists" element={<ListItem />}></Route>
-          </Routes>
-          <Routes>
             <Route path="/cards" element={<CardSlider />}></Route>
-          </Routes>
-          {/* <Routes>
+            {/* <Routes>
             <Route path="/liked" element={<Like />}></Route>
           </Routes> */}
-          <Routes>
             <Route path="*" element={<Error />}></Route>
           </Routes>
         </main>
