@@ -1,5 +1,11 @@
 @import "./../App/variables";
 
+.header {
+  position: fixed;
+  height: 100vh;
+  max-width: 20%;
+}
+
 .header__list {
   max-width: 20%;
   list-style-type: none;
@@ -17,4 +23,8 @@
     text-decoration: underline;
     color: $accent-color;
   }
+}
+
+.header__link {
+  color: inherit;
 }

@@ -17,7 +17,7 @@ const List = ({ key, word, transcription, translation, theme }) => {
           <li className="list__item visually-hidden key">{key}</li>
           <li className="list__item title">{word}</li>
           <li className="list__item subtitle">{translation}</li>
-          <li className="list__item text">[ {transcription} ]</li>
+          <li className="list__item text">{transcription}</li>
           <li className="list__item theme">{theme}</li>
           <li className="list__item btns">
             {!pressed && (

@@ -1,25 +1,23 @@
 import React, { useState } from "react";
 import "../Card/_card.scss";
 import Like from "./../Like/Like.jsx";
-import words from "../../utils/words";
 
 const Card = ({ key, word, transcription, translation }) => {
   const [pressed, setPressed] = useState(false);
   const showWord = () => {
     setPressed(!pressed);
   };
-  const item = words[key];
 
   return (
     <div className="card-container">
       {!pressed ? (
         <>
-          <div {...item} className="card">
+          <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{item.key}</p>
-            <p className="card__title">{item.word}</p>
-            <p className="card__text">{item.transcription}</p>
-            <p className="card__subtitle visually-hidden">{item.translation}</p>
+            <p className="card__title visually-hidden ">{key}</p>
+            <p className="card__title">{word}</p>
+            <p className="card__text">{transcription}</p>
+            <p className="card__subtitle visually-hidden">{translation}</p>
             <button className="card__btn" onClick={showWord}>
               Show tranlation
             </button>
@@ -29,8 +27,8 @@ const Card = ({ key, word, transcription, translation }) => {
         <>
           <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{item.key}</p>
-            <p className="card__subtitle">{item.translation}</p>
+            <p className="card__title visually-hidden ">{key}</p>
+            <p className="card__subtitle">{translation}</p>
             <button className="card__btn" onClick={showWord}>
               Show word
             </button>
