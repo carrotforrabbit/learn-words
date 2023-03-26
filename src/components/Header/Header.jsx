@@ -69,6 +69,7 @@ function Header() {
             <Route path="/liked" element={<Like />}></Route>
           </Routes> */}
             <Route path="*" element={<Error />}></Route>
+            <Route path="/" element={<ListItem />}></Route>
           </Routes>
         </main>
       </div>

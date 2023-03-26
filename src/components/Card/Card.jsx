@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Card/_card.scss";
 import Like from "./../Like/Like.jsx";
 
-const Card = ({ key, word, transcription, translation }) => {
+const Card = ({ index, word, transcription, translation }) => {
   const [pressed, setPressed] = useState(false);
   const showWord = () => {
     setPressed(!pressed);
@@ -14,7 +14,7 @@ const Card = ({ key, word, transcription, translation }) => {
         <>
           <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{key}</p>
+            <p className="card__title visually-hidden ">{index}</p>
             <p className="card__title">{word}</p>
             <p className="card__text">{transcription}</p>
             <p className="card__subtitle visually-hidden">{translation}</p>
@@ -27,7 +27,7 @@ const Card = ({ key, word, transcription, translation }) => {
         <>
           <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{key}</p>
+            <p className="card__title visually-hidden ">{index}</p>
             <p className="card__subtitle">{translation}</p>
             <button className="card__btn" onClick={showWord}>
               Show word
@@ -39,7 +39,7 @@ const Card = ({ key, word, transcription, translation }) => {
   );
 };
 Card.defaultProps = {
-  key: "0",
+  index: "0",
   word: "word",
   translation: "translation",
   transcription: " ",
