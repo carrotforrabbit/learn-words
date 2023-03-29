@@ -1,21 +1,12 @@
 @import "./../App/variables";
 
-// .card__icon {
-//   width: 2rem;
-//   height: 2rem;
-//   fill: $bgr-color;
-//   cursor: pointer;
-
-//   &:hover {
-//     transform: scale(1.1);
-//   }
-// }
-
-.card__prev {
-  width: 30px;
-  height: 30px;
-  border: none;
-  border-radius: 50px;
-  background-color: $font-color;
+.card__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: $bgr-color;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

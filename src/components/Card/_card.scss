@@ -1,6 +1,8 @@
 @import "./../App/variables";
 
 .card-container {
+  max-width: 30rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
