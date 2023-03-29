@@ -1,0 +1,75 @@
+@import "./../App/variables";
+
+.listitem > ul {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+  border: 1px solid $add-color;
+  border-radius: 25px;
+}
+
+.listitem__item {
+  width: 20%;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.listitem__btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid $bgr-color;
+  border-radius: 50px;
+  background-color: $font-color;
+  color: $bgr-color;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $accent-color;
+  }
+
+  &:active {
+    background-color: $add-color;
+  }
+}
+
+.btn-save {
+  background-color: transparent;
+  border: 1px solid $font-color;
+  color: $font-color;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border: 1px solid $font-color;
+  border-radius: 50px;
+  color: $font-color;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-color;
+    color: $bgr-color;
+  }
+}
+
+.listitem__input {
+  max-width: 50%;
+  padding: 0.5rem 1rem;
+  border: 1px solid $bgr-color;
+  border-radius: 50px;
+}
+
+.btns {
+  display: flex;
+}
