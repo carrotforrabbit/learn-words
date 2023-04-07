@@ -3,7 +3,7 @@ import "./_listitem.scss";
 import "../DelBtn/DelBtn.jsx";
 import DelBtn from "../DelBtn/DelBtn.jsx";
 
-const ListItem = ({ key, word, transcription, translation, theme }) => {
+const ListItem = ({ index, word, transcription, translation, theme }) => {
   const [pressed, setPressed] = useState(false);
   const editWord = () => {
     setPressed(!pressed);
@@ -12,7 +12,7 @@ const ListItem = ({ key, word, transcription, translation, theme }) => {
     <div className="listitem">
       {!pressed ? (
         <ul>
-          <li className="listitem__item visually-hidden key">{key}</li>
+          <li className="listitem__item visually-hidden key">{index}</li>
           <li className="listitem__item title">{word}</li>
           <li className="listitem__item subtitle">{translation}</li>
           <li className="listitem__item text">{transcription}</li>

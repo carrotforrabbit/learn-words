@@ -10,7 +10,7 @@ export default function List() {
         Here you can learn English words in an easy and fun way.
       </p>
       {words.map((word) => (
-        <ListItem key={word.key} {...word} />
+        <ListItem key={word.index} {...word} />
       ))}
     </div>
   );

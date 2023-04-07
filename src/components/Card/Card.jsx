@@ -6,12 +6,13 @@ import BtnPrev from "./../BtnPrev/BtnPrev.jsx";
 import BtnNext from "./../BtnNext/BtnNext.jsx";
 import words from "../../utils/words";
 
-const Card = () => {
+const Card = (props) => {
   const [pressed, setPressed] = useState(false);
   const [index, setIndex] = useState(0);
   const [clickedPrev, setPrevClick] = useState(false);
   const [clickedNext, setNextClick] = useState(false);
-  const wordid = words[index];
+  // const wordid = words[index];
+  console.log(props);
 
   const goToPrevCard = () => {
     if (index - 1 < 0) {
@@ -41,11 +42,11 @@ const Card = () => {
         <>
           <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{wordid.key}</p>
-            <p className="card__title">{wordid.word}</p>
-            <p className="card__text">{wordid.transcription}</p>
+            <p className="card__title visually-hidden ">{props.index}</p>
+            <p className="card__title">{props.word}</p>
+            <p className="card__text">{props.transcription}</p>
             <p className="card__subtitle visually-hidden">
-              {wordid.translation}
+              {props.translation}
             </p>
             <button className="card__btn" onClick={showWord}>
               Show tranlation
@@ -56,8 +57,8 @@ const Card = () => {
         <>
           <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{wordid.key}</p>
-            <p className="card__subtitle">{wordid.translation}</p>
+            <p className="card__title visually-hidden ">{props.index}</p>
+            <p className="card__subtitle">{props.translation}</p>
             <button className="card__btn" onClick={showWord}>
               Show word
             </button>
