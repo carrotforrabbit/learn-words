@@ -11,24 +11,20 @@ const Card = (props) => {
   const [index, setIndex] = useState(0);
   const [clickedPrev, setPrevClick] = useState(false);
   const [clickedNext, setNextClick] = useState(false);
-  // const wordid = words[index];
+  const word = props[index];
   console.log(props);
 
   const goToPrevCard = () => {
     if (index - 1 < 0) {
       setIndex(words.length - 1);
-    } else {
-      setIndex(index - 1);
-      setPrevClick(!clickedPrev);
-    }
+    } else setIndex(index - 1);
+    setPrevClick(!clickedPrev);
   };
   const goToNextCard = () => {
     if (index + 1 >= words.length) {
       setIndex(0);
-    } else {
-      setIndex(index + 1);
-      setNextClick(!clickedNext);
-    }
+    } else setIndex(index + 1);
+    setNextClick(!clickedNext);
   };
 
   const showWord = () => {
@@ -37,17 +33,15 @@ const Card = (props) => {
 
   return (
     <div className="card-container">
-      <BtnPrev onClick={goToPrevCard} />
+      <BtnPrev PrevCard={goToPrevCard} />
       {!pressed ? (
         <>
           <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{props.index}</p>
-            <p className="card__title">{props.word}</p>
-            <p className="card__text">{props.transcription}</p>
-            <p className="card__subtitle visually-hidden">
-              {props.translation}
-            </p>
+            <p className="card__title visually-hidden ">{word.index}</p>
+            <p className="card__title">{word.word}</p>
+            <p className="card__text">{word.transcription}</p>
+            <p className="card__subtitle visually-hidden">{word.translation}</p>
             <button className="card__btn" onClick={showWord}>
               Show tranlation
             </button>
@@ -57,15 +51,15 @@ const Card = (props) => {
         <>
           <div className="card">
             <Like />
-            <p className="card__title visually-hidden ">{props.index}</p>
-            <p className="card__subtitle">{props.translation}</p>
+            <p className="card__title visually-hidden ">{word.index}</p>
+            <p className="card__subtitle">{word.translation}</p>
             <button className="card__btn" onClick={showWord}>
               Show word
             </button>
           </div>
         </>
       )}
-      <BtnNext onClick={goToNextCard} />
+      <BtnNext NextCard={goToNextCard} />
     </div>
   );
 };

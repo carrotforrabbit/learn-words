@@ -1,9 +1,9 @@
 import React from "react";
 import "../BtnPrev/BtnPrev.scss";
 
-function BtnPrev(props) {
+function BtnPrev({ PrevCard }) {
   return (
-    <div className="card__prev" onClick={props.PrevCard}>
+    <div className="card__prev" onClick={PrevCard}>
       <svg
         className="card__icon"
         xmlns="http://www.w3.org/2000/svg"

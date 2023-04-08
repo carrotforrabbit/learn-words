@@ -1,9 +1,9 @@
 import React from "react";
 import "../BtnNext/BtnNext.scss";
 
-function BtnNext(props) {
+function BtnNext({ NextCard }) {
   return (
-    <div className="card__prev" onClick={props.NextCard}>
+    <div className="card__prev" onClick={NextCard}>
       <svg
         className="card__icon"
         xmlns="http://www.w3.org/2000/svg"
