@@ -9,7 +9,8 @@ function Header() {
         <ul className="header__list">
           <li className="header__logo">
             <Link to="/home">
-              <svg
+              <img src="../../img/logo.jpg" alt="Logo." />
+              {/* <svg
                 width="50px"
                 height="50px"
                 viewBox="0 0 48 48"
@@ -32,7 +33,7 @@ function Header() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-              </svg>
+              </svg> */}
             </Link>
           </li>
           <li className="header__item">
