@@ -78,3 +78,18 @@
   font-size: 0.7rem;
   font-weight: bold;
 }
+
+@media screen and (max-width: $tablet-width) {
+  .card {
+    max-width: 13rem;
+    margin: 2% auto 5rem auto;
+  }
+
+  .card-wrapper {
+    margin: 0 2rem;
+  }
+
+  .card__icon {
+    margin: 0 1rem;
+  }
+}

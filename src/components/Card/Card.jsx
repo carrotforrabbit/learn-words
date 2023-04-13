@@ -72,7 +72,7 @@ const Card = (props) => {
         )}
         <BtnNext NextCard={goToNextCard} />
       </div>
-      <Count handleLearned={handleLearned} />
+      <Count />
     </div>
   );
 };

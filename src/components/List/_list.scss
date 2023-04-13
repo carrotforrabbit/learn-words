@@ -1,7 +1,5 @@
 @import "./../App/variables";
 
-.list {
-}
 .list__title {
   padding-left: 20%;
   text-align: left;
@@ -13,4 +11,15 @@
 
 .list__text {
   padding: 2rem 0 2rem 20%;
+}
+
+@media screen and (max-width: $tablet-width) {
+  .list__title {
+    padding-left: 5%;
+    font-size: 3.5rem;
+  }
+
+  .list__text {
+    padding-left: 5%;
+  }
 }

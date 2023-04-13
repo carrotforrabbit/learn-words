@@ -11,3 +11,9 @@
     transform: scale(1.1);
   }
 }
+
+@media screen and (max-width: $tablet-width) {
+  .card__icon {
+    margin: 0 1rem;
+  }
+}
