@@ -8,12 +8,12 @@ function Like() {
     setPressed(!pressed);
   };
   return (
-    <div className="card__like">
+    <div className="card-like">
       {!pressed ? (
         <>
           <svg
             onClick={addLike}
-            className="card__like-icon"
+            className="card-like__icon"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@ function Like() {
         <>
           <svg
             onClick={addLike}
-            className="card__like-icon card__likeSelected"
+            className="card-like__icon card-likeSelected"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">

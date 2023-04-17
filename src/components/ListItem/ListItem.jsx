@@ -3,11 +3,13 @@ import "./_listitem.scss";
 import "../DelBtn/DelBtn.jsx";
 import DelBtn from "../DelBtn/DelBtn.jsx";
 
-const ListItem = ({ index, word, transcription, translation, theme }) => {
+const ListItem = (props) => {
   const [pressed, setPressed] = useState(false);
   const editWord = () => {
     setPressed(!pressed);
   };
+  const { index, word, translation, transcription, theme } = props;
+
   return (
     <div className="listitem">
       {!pressed ? (

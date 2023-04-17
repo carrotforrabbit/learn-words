@@ -1,6 +1,6 @@
 @import "./../App/variables";
 
-.card__like-icon {
+.card-like__icon {
   width: 2rem;
   height: 2rem;
   border: 1px solid $bgr-color;
@@ -12,6 +12,6 @@
   }
 }
 
-.card__likeSelected {
+.card-likeSelected {
   fill: $accent-color;
 }
