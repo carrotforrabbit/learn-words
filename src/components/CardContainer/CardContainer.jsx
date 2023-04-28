@@ -7,14 +7,14 @@ import BtnNext from "../BtnNext/BtnNext.jsx";
 import Count from "../Count/Count.jsx";
 import words from "../../utils/words";
 
-const CardContainer = (props) => {
+const CardContainer = () => {
   const [pressed, setPressed] = useState(false);
   const [index, setIndex] = useState(0);
   const [clickedPrev, setPrevClick] = useState(false);
   const [clickedNext, setNextClick] = useState(false);
   const [viewCard, setViewCard] = useState(false);
   const [learnWords, setLearnWords] = useState(0);
-  const word = props[index];
+  const word = words[index];
 
   const goToPrevCard = () => {
     if (index - 1 < 0) {
@@ -43,7 +43,7 @@ const CardContainer = (props) => {
       setViewCard(true);
     }
   };
-
+  console.log(viewCard, "viewcard");
   return (
     <div className="card-container">
       <div className="card-wrapper">

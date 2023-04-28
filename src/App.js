@@ -4,7 +4,6 @@ import React from "react";
 import List from "./components/List/List";
 import CardContainer from "./components/CardContainer/CardContainer";
 import Error from "./components/Error/Error";
-import words from "./utils/words";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/home" element={<List />}></Route>
-            <Route path="/cards" element={<CardContainer {...words} />}></Route>
+            <Route path="/cards" element={<CardContainer />}></Route>
             <Route path="/liked" element={<Error />}></Route>
             <Route path="*" element={<Error />}></Route>
             <Route path="/" element={<List />}></Route>
